@@ -2,7 +2,7 @@
  * @name
  * @author MingShined
  */
-import React, { Fragment } from 'react';
+import React from 'react';
 import { MenuBean, MenuType } from 'src/common/menu/type';
 
 import { Menu, Icon } from 'antd';

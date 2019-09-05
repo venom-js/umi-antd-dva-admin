@@ -8,7 +8,6 @@ import { Layout, ConfigProvider } from 'antd';
 import HeaderNode from './components/HeaderNode';
 import ContentNode from './components/ContentNode';
 import FooterNode from './components/FooterNode';
-import venomBasicConfig from 'src/venom.config';
 declare var window: any;
 
 interface HeaderLayoutProps extends Basic.BaseProps {}
@@ -27,15 +26,15 @@ const HeaderLayout: React.FC<HeaderLayoutProps> = props => {
   };
   const { children } = props;
   return (
-    <Layout className="flex flex-1 h-100p">
+    <Layout className="flex flex-1">
       <HeaderNode />
-      <Layout className="flex h-100p">
+      <Layout className="flex">
         <ConfigProvider getPopupContainer={() => popupDom.current}>
           <div ref={popupDom}>
             <ContentNode children={children} />
+            <FooterNode />
           </div>
         </ConfigProvider>
-        <FooterNode />
       </Layout>
     </Layout>
   );

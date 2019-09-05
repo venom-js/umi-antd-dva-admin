@@ -11,18 +11,19 @@ const ContentNode: React.FC = props => {
   return (
     <div
       style={{
-        paddingTop: venomBasicConfig.fixHeader ? venomBasicConfig.headerHeight : '0'
+        paddingTop: venomBasicConfig.fixHeader ? venomBasicConfig.headerHeight : 0,
+        background: venomBasicConfig.contentBg
       }}
       className="flex flex-1 of-x-hd of-y-at"
     >
       <Content
         className={
           venomBasicConfig.layout === 'header' &&
-          venomBasicConfig.contentWidth === 'fixed'
+          venomBasicConfig.contentWidthMode === 'fixed'
             ? styles.wrap
             : 'flex'
         }
-        style={{ flexDirection: 'column', background: venomBasicConfig.contentBg }}
+        style={{ flexDirection: 'column', }}
       >
         {props.children}
       </Content>

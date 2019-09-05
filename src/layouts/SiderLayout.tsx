@@ -28,16 +28,18 @@ const SiderLayout: React.FC<SiderLayoutProps> = props => {
   };
   const { children } = props;
   return (
-    <Layout className={venomBasicConfig.fixSider ? 'flex flex-1 h-100p' : 'mh-100p'}>
+    <Layout
+      className={venomBasicConfig.fixSider ? 'flex flex-1 h-100p' : 'mh-100p'}
+    >
       <SiderMenu />
-      <Layout className="flex h-100p">
+      <Layout className="flex">
         <HeaderNode />
         <ConfigProvider getPopupContainer={() => popupDom.current}>
           <div ref={popupDom}>
             <ContentNode children={children} />
+            <FooterNode />
           </div>
         </ConfigProvider>
-        <FooterNode />
       </Layout>
     </Layout>
   );
