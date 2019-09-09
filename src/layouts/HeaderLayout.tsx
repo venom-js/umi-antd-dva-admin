@@ -30,7 +30,7 @@ const HeaderLayout: React.FC<HeaderLayoutProps> = props => {
       <HeaderNode />
       <Layout className="flex">
         <ConfigProvider getPopupContainer={() => popupDom.current}>
-          <div ref={popupDom}>
+          <div className="h-100p" ref={popupDom}>
             <ContentNode children={children} />
             <FooterNode />
           </div>

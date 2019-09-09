@@ -35,7 +35,7 @@ const SiderLayout: React.FC<SiderLayoutProps> = props => {
       <Layout className="flex">
         <HeaderNode />
         <ConfigProvider getPopupContainer={() => popupDom.current}>
-          <div ref={popupDom}>
+          <div className="h-100p" ref={popupDom}>
             <ContentNode children={children} />
             <FooterNode />
           </div>

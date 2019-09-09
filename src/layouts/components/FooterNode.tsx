@@ -8,7 +8,7 @@ const { Footer } = Layout;
 
 const FooterNode: React.FC = props => {
   return (
-    <Footer className="ft-ct" style={{ background: venomBasicConfig.footerBg }}>
+    <Footer id="footer" className="ft-ct" style={{ background: venomBasicConfig.footerBg }}>
       <p>Copyright@ {new Date().getFullYear()} 陈先生有酒有故事</p>
     </Footer>
   );
